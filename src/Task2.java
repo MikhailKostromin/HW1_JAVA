@@ -1,14 +1,13 @@
 public class Task2 {
-//https://leetcode.com/problems/remove-element/
+    //https://leetcode.com/problems/remove-element/
     public int removeElement(int[] nums, int val) {
-        int count = 0;
-        // Loop through all the elements of the array
+        int copyInd = 0;
         for (int i = 0; i < nums.length; i++) {
-            // If the element is not val
             if (nums[i] != val) {
-                nums[count++] = nums[i];
+                nums[copyInd] = nums[i];
+                copyInd += 1;
             }
         }
-        return count;
+        return copyInd;
     }
 }
